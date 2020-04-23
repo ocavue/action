@@ -60,6 +60,7 @@ import readChangesets from "@changesets/read";
 
   let publishScript = core.getInput("publish");
   let versionScript = core.getInput("version");
+  let commitPrefix = core.getInput("commitPrefix") || "ci(changeset)"
   core.setOutput('published', 'false');
   core.setOutput('publishedPackages', '[]');
 
@@ -247,7 +248,7 @@ ${
     const prTitle = `Version Packages${
       isInPreMode ? ` (${preState.tag})` : ""
     }`;
-    const commitMsg = `ci(changeset): generate PR with changelog &${
+    const commitMsg = `${commitPrefix}: generate PR with changelog &${
       isInPreMode ? ` (${preState.tag})` : ""
     } version updates`;
 

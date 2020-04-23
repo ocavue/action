@@ -10,6 +10,9 @@ inputs:
   version:
     description: "The command to update version, edit CHANGELOG, read and delete changesets. Default to `changeset version` if not provided"
     required: false
+  commitPrefix:
+    description: The commit header prefix to use. Default to angular-style commit prefixes `"ci(changeset)"`
+    required: false
 outputs:
   published:
     description: A boolean value to indicate whether a publishing is happened or not

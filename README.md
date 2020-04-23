@@ -9,6 +9,7 @@ This action for [Changesets](https://github.com/atlassian/changesets) creates a 
 
 - publish - The command to use to build and publish packages
 - version - The command to update version, edit CHANGELOG, read and delete changesets. Default to `changeset version` if not provided
+- commitPrefix - The commit header prefix to use. Default to angular-style commit prefixes `"ci(changeset)"`
 
 ### Outputs
 
