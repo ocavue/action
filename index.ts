@@ -112,6 +112,8 @@ import readChangesets from "@changesets/read";
     let releasedWorkspaces: Workspace[] = [];
 
     for (let line of changesetPublishOutput.stdout.split("\n")) {
+      console.log('changesetPublishOutput:', line)
+
       let match = line.match(newTagRegex);
       if (match === null) {
         continue;
